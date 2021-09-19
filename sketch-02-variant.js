@@ -7,7 +7,7 @@ const math = require('canvas-sketch-util/math');
 const random = require('canvas-sketch-util/random');
 
 const settings = {
-  dimensions: [ 1080, 1080 ]
+  dimensions: [ 1200, 1200 ]
 };
 
 const degToRad = (degrees) => {
@@ -26,13 +26,13 @@ const sketch = () => {
     context.fillStyle = 'white';
     context.strokeStyle = 'white';
 
-    const cx = 1080;
-    const cy = 1080;
+    const cx = 1200;
+    const cy = 1200;
     const w = width * 0.01;
     const h = height * 0.1;
     let x, y;
 
-    const num = 31;
+    const num = 60;
     const radius = width * 0.7;
 
     for (let i = 0; i < num; i++) {

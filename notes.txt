@@ -7,6 +7,9 @@ https://github.com/mattdesl/canvas-sketch-util
 typescript
 https://gist.github.com/mattdesl/1e9ab019534838e8c870ae06371be469
 
+canvas references
+https://www.w3schools.com/graphics/canvas_reference.asp
+
 tweakpane
 https://cocopon.github.io/tweakpane/
 
