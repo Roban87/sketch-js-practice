@@ -2,6 +2,7 @@ const canvasSketch = require('canvas-sketch');
 const random = require('canvas-sketch-util/random');
 const math = require('canvas-sketch-util/math');
 const Tweakpane = require('tweakpane');
+const svg = require('./canvas-to-svg.js');
 
 const settings = {
   dimensions: [ 1080, 1080 ],
@@ -25,8 +26,8 @@ const params = {
 }
 
 const sketch = () => {
-  return ({ context, width, height, frame }) => {
-    context.fillStyle = 'black';
+  return svg(({ context, width, height, frame }) => {
+    context.fillStyle = '#A61F43';
     context.fillRect(0, 0, width, height);
 
     const cols = params.cols;
@@ -63,19 +64,19 @@ const sketch = () => {
       context.translate(cellWidth * 0.5, cellHeight * 0.5);
       context.rotate(angle);
 
-      context.strokeStyle = 'white';
+      context.strokeStyle = '#F2D027';
       context.lineWidth = scale;
       context.lineCap = params.lineCap;
 
       context.beginPath();
-      context.moveTo(w * -0.5, 0);
-      context.lineTo(w * 0.5, 0);
+      context.moveTo(0, h * -0.5);
+      context.lineTo(0, h * 0.5);
       context.stroke();
 
       context.restore();
     }
+  });
 
-  };
 };
 
 const createPane = () => {
